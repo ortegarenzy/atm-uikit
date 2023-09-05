@@ -14,6 +14,7 @@
 		AC2E3F212AA0E1BA009A2896 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3F202AA0E1BA009A2896 /* ViewController.xib */; };
 		AC2E3F232AA0FCC8009A2896 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3F222AA0FCC8009A2896 /* ResultViewController.swift */; };
 		AC2E3F252AA0FCD5009A2896 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3F242AA0FCD5009A2896 /* ResultViewController.xib */; };
+		ACBD5F362AA70552009E2256 /* ResultViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD5F352AA70552009E2256 /* ResultViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AC2E3F202AA0E1BA009A2896 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		AC2E3F222AA0FCC8009A2896 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AC2E3F242AA0FCD5009A2896 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		ACBD5F352AA70552009E2256 /* ResultViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				AC2E3F202AA0E1BA009A2896 /* ViewController.xib */,
 				AC2E3F222AA0FCC8009A2896 /* ResultViewController.swift */,
 				AC2E3F242AA0FCD5009A2896 /* ResultViewController.xib */,
+				ACBD5F352AA70552009E2256 /* ResultViewControllerDelegate.swift */,
 			);
 			path = "atm-uikit";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2E3F112AA0E12D009A2896 /* ViewController.swift in Sources */,
+				ACBD5F362AA70552009E2256 /* ResultViewControllerDelegate.swift in Sources */,
 				AC2E3F0D2AA0E12D009A2896 /* AppDelegate.swift in Sources */,
 				AC2E3F0F2AA0E12D009A2896 /* SceneDelegate.swift in Sources */,
 				AC2E3F232AA0FCC8009A2896 /* ResultViewController.swift in Sources */,
@@ -274,10 +278,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "atm-uikit/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ATM UIKit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,10 +304,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "atm-uikit/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ATM UIKit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

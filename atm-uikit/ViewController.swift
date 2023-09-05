@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ResultViewControllerDelegate {
 
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var btnWithdraw: UIButton!
@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         }
         print("amount found: \(amount)")
         let viewController = ResultViewController(nibName: "ResultViewController", bundle: Bundle.main)
+        viewController.amount = amount
+        viewController.delegate = self
         present(viewController, animated: true)
     }
     
@@ -52,6 +54,10 @@ class ViewController: UIViewController {
             remainingAmount -= numberOfNotes * denomination
         }
         return remainingAmount == 0
+    }
+    
+    func displayBreakdown(amount: Int) {
+        
     }
 }
 
