@@ -14,7 +14,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var fiveHundredLabel: UILabel!
     @IBOutlet weak var oneHundredLabel: UILabel!
     @IBOutlet weak var resetBtn: UIButton!
-    var amount: Int?
+    var withdrawn: (thousand: Int, fiveHundred: Int, oneHundred: Int)?
     var delegate: ResultViewControllerDelegate?
     let thousand: Int = 1000
     let fiveHundred: Int = 500
@@ -22,14 +22,9 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let amount else { return }
-        let result = breakdownAmount(amount)
-        let thousandResult = processResult(result: result, type: thousand)
-        thousandLabel.text = String(thousandResult)
-        let fiveHundredResult = processResult(result: result, type: fiveHundred)
-        fiveHundredLabel.text = String(fiveHundredResult)
-        let oneHundredResult = processResult(result: result, type: oneHundred)
-        oneHundredLabel.text = String(oneHundredResult)
+        thousandLabel.text = processResult(amount: withdrawn?.thousand, type: thousand)
+        fiveHundredLabel.text = processResult(amount: withdrawn?.fiveHundred, type: fiveHundred)
+        oneHundredLabel.text = processResult(amount: withdrawn?.oneHundred, type: oneHundred)
     }
     
     @IBAction func onResetTap(_ sender: Any) {
@@ -37,25 +32,8 @@ class ResultViewController: UIViewController {
         dismiss(animated: true)
     }
 
-    func processResult(result: [Int: Int], type: Int) -> Int {
-        guard let amount = result[type] else { return 0 }
-        return amount
-    }
-    
-    func breakdownAmount(_ amount: Int) -> [Int: Int] {
-        var remainingAmount = amount
-        var breakdown: [Int: Int] = [:]
-        
-        let denominations = [thousand, fiveHundred, oneHundred]
-        
-        for denomination in denominations {
-            let count = remainingAmount / denomination
-            if count > 0 {
-                breakdown[denomination] = count
-                remainingAmount %= denomination
-            }
-        }
-        
-        return breakdown
+    func processResult(amount: Int?, type: Int) -> String {
+        guard let amountWithdrawn = amount else { return "0" }
+        return String(amountWithdrawn)
     }
 }
