@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ResultViewControllerDelegate {
-    func displayBreakdown(amount: Int)
+    func reset()
 }

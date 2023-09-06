@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="fiveHundredLabel" destination="8YC-Cb-AgG" id="bwD-K2-3Gm"/>
                 <outlet property="oneHundredLabel" destination="ou9-kY-mfU" id="jLe-ZX-YoK"/>
+                <outlet property="resetBtn" destination="ZaY-Zg-6lE" id="eVQ-y6-2vb"/>
                 <outlet property="thousandLabel" destination="Dig-FP-GQa" id="bcq-VD-fh0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="06l-fg-BzE"/>
             </connections>
@@ -78,6 +79,9 @@
                             <buttonConfiguration key="configuration" style="filled" title="RESET">
                                 <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="onResetTap:" destination="-1" eventType="touchUpInside" id="LoB-Fa-z0g"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

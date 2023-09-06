@@ -13,6 +13,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var thousandLabel: UILabel!
     @IBOutlet weak var fiveHundredLabel: UILabel!
     @IBOutlet weak var oneHundredLabel: UILabel!
+    @IBOutlet weak var resetBtn: UIButton!
     var amount: Int?
     var delegate: ResultViewControllerDelegate?
     let thousand: Int = 1000
@@ -31,6 +32,11 @@ class ResultViewController: UIViewController {
         oneHundredLabel.text = String(oneHundredResult)
     }
     
+    @IBAction func onResetTap(_ sender: Any) {
+        delegate?.reset()
+        dismiss(animated: true)
+    }
+
     func processResult(result: [Int: Int], type: Int) -> Int {
         guard let amount = result[type] else { return 0 }
         return amount

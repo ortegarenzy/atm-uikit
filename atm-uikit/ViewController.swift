@@ -56,8 +56,8 @@ class ViewController: UIViewController, ResultViewControllerDelegate {
         return remainingAmount == 0
     }
     
-    func displayBreakdown(amount: Int) {
-        
+    func reset() {
+        amountTextField.text = ""
     }
 }
 
